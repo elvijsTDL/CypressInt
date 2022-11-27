@@ -219,7 +219,7 @@
       "last 1 safari version"
     ]
   },
-  "cypress-cucumber-preprocessor" : {
+  "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": false,
     "typescript": true,
     "omitFiltered": true
