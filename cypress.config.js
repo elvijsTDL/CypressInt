@@ -10,6 +10,7 @@ const browserify = require("@badeball/cypress-cucumber-preprocessor/browserify")
 dotenv.config();
 
 module.exports = defineConfig({
+  projectId: "k6d3wt",
   component: {
     devServer,
   },
