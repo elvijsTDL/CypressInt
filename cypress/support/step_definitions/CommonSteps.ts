@@ -9,7 +9,20 @@ Given(/^the database is seeded$/, function () {
 });
 Given(/^User is logged in with xState$/, function () {
     Common.loginUserWithxState()
+    cy.wait("@notificationsList")
 });
 Given(/^Notifications are mocked to an empty state$/, function () {
     Common.mockEmptyNotificationsState()
+});
+Given(/^Notifications counter does not show a number$/, function () {
+    Common.notificationCounterDoesNotExist()
+});
+Given(/^User opens the notifications page$/, function () {
+    Common.openNotificationPage()
+});
+Given(/^Logged in user gets switched to User B$/, function () {
+    Common.switchToUserB()
+});
+Given(/^User intercepts the notification requests$/, function () {
+    Common.interceptNotificationApiCalls()
 });

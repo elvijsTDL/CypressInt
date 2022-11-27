@@ -19,6 +19,11 @@ declare namespace Cypress {
     getBySel(selector: string, args?: any): Chainable<JQuery<HTMLElement>>;
 
     /**
+     * Get an element with data-test*= selector
+     */
+    getByWildSel(selector: string, args?: any): Chainable<JQuery<HTMLElement>>;
+
+    /**
      * Task to filter data from the database while running the tests
      */
     task(
@@ -50,5 +55,10 @@ declare namespace Cypress {
      * Logs in bypassing the UI by triggering an XState login event
      */
      loginByXstate(username:string,password?:string): Chainable<any>
+
+    /**
+     * Send a LOGOUT event to xState to log the user out
+     */
+    logoutByXstate(): Chainable<any>
   }
 }

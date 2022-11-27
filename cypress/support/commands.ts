@@ -4,6 +4,9 @@ Cypress.Commands.add("getBySel", (selector, ...args) => {
   return cy.get("[data-test=" + selector + "]", ...args);
 });
 
+Cypress.Commands.add("getByWildSel", (selector, ...args) => {
+  return cy.get("[data-test*=" + selector + "]", ...args);
+});
 
 Cypress.Commands.add("database" , (operation,entity,query) => {
   const params = {
@@ -62,4 +65,12 @@ Cypress.Commands.add("loginByXstate", (username,password = Cypress.env("defaultP
     log.snapshot("after")
     log.end()
   })
+})
+
+Cypress.Commands.add("logoutByXstate" , () => {
+  cy.window({log:false}).then((win) => {
+    win.authService.send("LOGOUT")
+  })
+
+  cy.location("pathname").should("equal", "/signin")
 })
