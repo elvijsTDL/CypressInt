@@ -19,14 +19,15 @@ jobs:
         with:
           runTests: false
 
+      - run: yarn lint
+      - run: yarn build:ci
+
       - name: Save build folder
         uses: actions/upload-artifact@v3
         with:
           name: build
           if-no-files-found: error
           path: build
-      - run: yarn lint
-      - run: yarn build:ci
 
   ui-chrome-tests:
     timeout-minutes: 15
@@ -59,7 +60,6 @@ jobs:
           record: true
           parallel: true
           group: "UI - Chrome"
-          spec: cypress/tests/ui/*
           config-file: cypress.config.js
         env:
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
@@ -97,7 +97,6 @@ jobs:
           record: true
           parallel: true
           group: "UI - Firefox"
-          spec: cypress/tests/ui/*
           config-file: cypress.config.js
         env:
           CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
