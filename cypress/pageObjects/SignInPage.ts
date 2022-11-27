@@ -44,14 +44,14 @@ export class SignInPage {
   }
 
   static clickOnSignUpField(field: string) {
-    cy.get("#" + field).click()
+    cy.get("#" + field).click();
   }
 
   static verifySignUpFieldErrors(field: string, message: string) {
-    cy.get("#" + field + "-helper-text").should("have.text",message)
+    cy.get("#" + field + "-helper-text").should("have.text", message);
   }
 
   static clickOnDisabledSignUpButton() {
-    cy.getBySel(SIGN_UP_BUTTON).click({force:true});
+    cy.getBySel(SIGN_UP_BUTTON).click({ force: true });
   }
 }

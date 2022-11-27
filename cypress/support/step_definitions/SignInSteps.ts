@@ -28,9 +28,9 @@ Then(/^The new user can log into their account$/, function () {
 Given(/^User clicks on the "(.*)"$/, function (field: string) {
   SignInPage.clickOnSignUpField(field);
 });
-Then(/^The (.*) has an error message saying (.*)$/, function (field:string,message:string) {
-  SignInPage.verifySignUpFieldErrors(field, message)
+Then(/^The (.*) has an error message saying (.*)$/, function (field: string, message: string) {
+  SignInPage.verifySignUpFieldErrors(field, message);
 });
 Given(/^User clicks on the the disabled sign up button$/, function () {
-  SignInPage.clickOnDisabledSignUpButton()
+  SignInPage.clickOnDisabledSignUpButton();
 });

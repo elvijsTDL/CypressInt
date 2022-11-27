@@ -17,7 +17,7 @@
 import "./commands";
 
 beforeEach(() => {
-    cy.intercept( { url: "http://localhost:3001/**" , middleware: true} , (req) => {
-        delete req.headers["if-none-match"]
-    })
-})
+  cy.intercept({ url: "http://localhost:3001/**", middleware: true }, (req) => {
+    delete req.headers["if-none-match"];
+  });
+});

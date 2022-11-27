@@ -20,4 +20,8 @@ Feature: Test cases with notifications
     And User dismisses the notification
 
   Scenario: User A sends payment to User B
-
+    And User intercepts the payment requests
+    And User is logged in with xState
+    And User creates a transaction to User B with UI
+    And Logged in user gets switched to User B
+    And The User B has received the payment and the transaction is visible in the main page

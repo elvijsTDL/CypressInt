@@ -11,7 +11,7 @@
       "phoneNumber": "625-316-9882",
       "avatar": "https://cypress-realworld-app-svgs.s3.amazonaws.com/t45AiwidW.svg",
       "defaultPrivacyLevel": "public",
-      "balance": 168137,
+      "balance": 158137,
       "createdAt": "2019-08-27T23:47:05.637Z",
       "modifiedAt": "2020-05-21T11:02:22.857Z"
     },
@@ -26,7 +26,7 @@
       "phoneNumber": "537-041-4355",
       "avatar": "https://cypress-realworld-app-svgs.s3.amazonaws.com/qywYp6hS0U.svg",
       "defaultPrivacyLevel": "private",
-      "balance": 101805,
+      "balance": 111805,
       "createdAt": "2019-09-09T13:48:45.489Z",
       "modifiedAt": "2020-05-21T02:34:01.483Z"
     },
@@ -9855,6 +9855,18 @@
       "requestResolvedAt": "",
       "createdAt": "2019-06-27T22:24:04.794Z",
       "modifiedAt": "2020-05-21T04:58:44.494Z"
+    },
+    {
+      "id": "3WPtYyM1s",
+      "uuid": "54a37a5e-568e-4d0a-bd48-8478c1934f69",
+      "amount": 10000,
+      "description": "Hello",
+      "receiverId": "qywYp6hS0U",
+      "senderId": "t45AiwidW",
+      "privacyLevel": "public",
+      "status": "complete",
+      "createdAt": "2022-11-27T15:50:12.575Z",
+      "modifiedAt": "2022-11-27T15:50:12.575Z"
     }
   ],
   "likes": [
@@ -9937,14 +9949,6 @@
       "transactionId": "SXHgQh46s7A",
       "createdAt": "2020-05-07T03:37:29.711Z",
       "modifiedAt": "2020-05-21T02:32:06.555Z"
-    },
-    {
-      "id": "z-Bk0z_ao",
-      "uuid": "255cbc50-8064-402b-850c-22e964291adf",
-      "userId": "t45AiwidW",
-      "transactionId": "7XaoAWOrn13",
-      "createdAt": "2022-11-27T13:10:16.150Z",
-      "modifiedAt": "2022-11-27T13:10:16.150Z"
     }
   ],
   "comments": [
@@ -10441,24 +10445,14 @@
       "modifiedAt": "2020-05-21T21:00:50.192Z"
     },
     {
-      "id": "MPhsOxd6IQ",
-      "uuid": "0deff5be-3d63-4c1f-a656-f5f396920d45",
+      "id": "z8TilF1i6m",
+      "uuid": "e573d784-474c-44e6-ac81-de832ec47eed",
       "userId": "qywYp6hS0U",
-      "transactionId": "7XaoAWOrn13",
-      "likeId": "z-Bk0z_ao",
-      "isRead": true,
-      "createdAt": "2022-11-27T13:10:16.153Z",
-      "modifiedAt": "2022-11-27T13:10:16.153Z"
-    },
-    {
-      "id": "VfCQk0zt7R",
-      "uuid": "146140be-6bad-4d86-8205-d533904615bb",
-      "userId": "t45AiwidW",
-      "transactionId": "7XaoAWOrn13",
-      "likeId": "z-Bk0z_ao",
+      "transactionId": "3WPtYyM1s",
+      "status": "received",
       "isRead": false,
-      "createdAt": "2022-11-27T13:10:16.155Z",
-      "modifiedAt": "2022-11-27T13:10:16.155Z"
+      "createdAt": "2022-11-27T15:50:12.585Z",
+      "modifiedAt": "2022-11-27T15:50:12.585Z"
     }
   ],
   "banktransfers": [
