@@ -13,7 +13,9 @@ export class Common {
         cy.database("find", "users").then((user:User)=> {
            return cy.loginByXstate(user.username)
         })
-        // eslint-disable-next-line cypress/no-unnecessary-waiting
-        cy.wait(10000)
+    }
+
+    static mockEmptyNotificationsState() {
+        cy.intercept("GET" , "/notifications" , []).as("mockedNotifications")
     }
 }

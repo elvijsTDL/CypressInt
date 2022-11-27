@@ -10,3 +10,6 @@ Given(/^the database is seeded$/, function () {
 Given(/^User is logged in with xState$/, function () {
     Common.loginUserWithxState()
 });
+Given(/^Notifications are mocked to an empty state$/, function () {
+    Common.mockEmptyNotificationsState()
+});

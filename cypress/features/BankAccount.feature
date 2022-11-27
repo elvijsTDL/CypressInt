@@ -5,4 +5,6 @@ Feature: Actions with bank accounts
 
   Scenario: Rendering an empty bank account state
     Then User is redirected to the home page
-    And User goes to the bank accounts section
+    And User goes to the bank accounts section while mocking empty bank account list
+    And Empty bank account onboarding view is visible
+
