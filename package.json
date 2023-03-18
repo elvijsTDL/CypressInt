@@ -218,5 +218,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": false,
+    "typescript": true,
+    "omitFiltered": true
   }
 }

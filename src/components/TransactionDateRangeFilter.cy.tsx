@@ -53,4 +53,37 @@ describe("Date filter test cases", () => {
     cy.get('[data-test="transaction-list-filter-date-clear-button"]').click();
     cy.get("@resetSpy").should("have.been.called");
   });
+
+  it.only("Should set the date range correctly", () => {
+    const log = Cypress.log({
+      name: "pickingDateRange",
+      displayName: "DATE RANGE",
+      message: "Picking a range for the filter to use",
+      autoEnd: false,
+      consoleProps() {
+        return {
+          something:
+            "Something that might be worthwhile printing for debugging in dev tools if you need it",
+        };
+      },
+    });
+    const filterDateRangeSpy = cy.spy();
+    const resetDateRangeSpy = cy.spy();
+    mount(
+      <TransactionDateRangeFilter
+        filterDateRange={filterDateRangeSpy}
+        dateRangeFilters={{}}
+        resetDateRange={resetDateRangeSpy}
+      />
+    );
+    log.snapshot("before");
+    cy.get('[data-test="transaction-list-filter-date-range-button"]').click();
+    cy.get("[data-date=2023-03-18]").click();
+    cy.get("[data-date=2023-03-23]")
+      .click()
+      .then(() => {
+        log.snapshot("after");
+        log.end();
+      });
+  });
 });

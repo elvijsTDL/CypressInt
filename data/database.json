@@ -74,6 +74,50 @@
       "balance": 75369,
       "createdAt": "2020-02-11T21:26:46.510Z",
       "modifiedAt": "2020-05-21T15:15:33.944Z"
+    },
+    {
+      "id": "HjZWIdayz",
+      "uuid": "ce67e10f-8661-4c28-8b9f-5aff33a42586",
+      "firstName": "Tester",
+      "lastName": "Foo",
+      "username": "user123",
+      "password": "$2a$10$ztGh2TPhRGNgL8wkE8d4dOiH6z/HnXq2vTVQtvG.w4cqzuv5x9zfa",
+      "balance": 0,
+      "createdAt": "2023-03-18T15:02:10.317Z",
+      "modifiedAt": "2023-03-18T15:02:10.317Z"
+    },
+    {
+      "id": "7ZpuDKXzC",
+      "uuid": "859bef6d-0799-497b-ae90-555c6d212584",
+      "firstName": "Tester",
+      "lastName": "Foo",
+      "username": "user123",
+      "password": "$2a$10$IoSkbNcZsaoSVSx.n3XLi.NR6e/T9h8fWP4eQ3Daj4WzSI7BkS0bK",
+      "balance": 0,
+      "createdAt": "2023-03-18T15:02:51.940Z",
+      "modifiedAt": "2023-03-18T15:02:51.940Z"
+    },
+    {
+      "id": "yVH-Ft5nr",
+      "uuid": "15574853-a095-434d-bba3-1f5d39f65821",
+      "firstName": "Tester",
+      "lastName": "Foo",
+      "username": "user123",
+      "password": "$2a$10$NbT/7v0OhNic/J2dONdZxeeB49rsdz.Bvl2Y/Tc/bGEK.QUN8LYDS",
+      "balance": 0,
+      "createdAt": "2023-03-18T15:04:44.029Z",
+      "modifiedAt": "2023-03-18T15:04:44.029Z"
+    },
+    {
+      "id": "ChspKqh1G",
+      "uuid": "88b335af-93ff-4d0b-84f9-c02b95cd6f37",
+      "firstName": "Tester",
+      "lastName": "Foo",
+      "username": "user123",
+      "password": "$2a$10$FygcBQlrf5y9W9GnUQRPUecHdlevpn2L1v1/7mrPvAk7rc4nXjGXS",
+      "balance": 0,
+      "createdAt": "2023-03-18T15:05:43.659Z",
+      "modifiedAt": "2023-03-18T15:05:43.659Z"
     }
   ],
   "contacts": [
