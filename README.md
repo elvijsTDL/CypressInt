@@ -67,8 +67,6 @@ yarn cypress:open
 > }
 > ```
 
-
-
 ## Database
 
 - The local JSON database is located in [data/database.json](./data/database.json) and is managed with [lowdb].
@@ -83,14 +81,14 @@ yarn cypress:open
 
 ## Additional NPM Scripts
 
-| Script         | Description                                                                                                                                                                       |
-| -------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| dev            | Starts backend in watch mode and frontend                                                                                                                                         |
-| start          | Starts backend and frontend                                                                                                                                                       |
-| types          | Validates types                                                                                                                                                                   |
-| db:seed        | Generates fresh database seeds for json files in /data                                                                                                                            |
-| start:empty    | Starts backend, frontend and Cypress with empty database seed                                                                                                                     |
-| tsnode         | Customized ts-node command to get around react-scripts restrictions                                                                                                               |
-| list:dev:users | Provides id and username for users in the dev database                                                                                                                            |
+| Script         | Description                                                         |
+| -------------- | ------------------------------------------------------------------- |
+| dev            | Starts backend in watch mode and frontend                           |
+| start          | Starts backend and frontend                                         |
+| types          | Validates types                                                     |
+| db:seed        | Generates fresh database seeds for json files in /data              |
+| start:empty    | Starts backend, frontend and Cypress with empty database seed       |
+| tsnode         | Customized ts-node command to get around react-scripts restrictions |
+| list:dev:users | Provides id and username for users in the dev database              |
 
 For a complete list of scripts see [package.json](./package.json)
