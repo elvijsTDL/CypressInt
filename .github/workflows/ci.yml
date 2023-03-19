@@ -1,0 +1,102 @@
+name: Cypress tests
+
+on:
+  push:
+    branch: cypress-march
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    container:
+      image: node16.16.0-chrome107-ff107
+      options: --user 1001
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        uses: cypress-io/github-action@v4
+        with:
+          runTests: false
+
+      - run: yarn lint
+      - run: yarn build:ci
+
+      - name: Save build folder
+        uses: actions/upload-artifact@v3
+        with:
+          name: build
+          path: build
+          if-no-files-found: error
+
+  ui-chrome-tests:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    container:
+      image: node16.16.0-chrome107-ff107
+      options: --user 1001
+    needs: install
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1,2,3]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download the build folder
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build
+
+      - name: Chrome tests
+        uses: cypress-io/github-action@v4
+        with:
+          start: yarn start:ci
+          wait-on: "http://localhost:3000"
+          wait-on-timeout: 120
+          browser: chrome
+          parallel: true
+          record: true
+          group: "Chrome"
+        env:
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+
+  firefox:
+    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    container:
+      image: node16.16.0-chrome107-ff107
+      options: --user 1001
+    needs: install
+    strategy:
+      fail-fast: false
+      matrix:
+        containers: [1,2,3]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Download the build folder
+        uses: actions/download-artifact@v3
+        with:
+          name: build
+          path: build
+
+      - name: Chrome tests
+        uses: cypress-io/github-action@v4
+        with:
+          start: yarn start:ci
+          wait-on: "http://localhost:3000"
+          wait-on-timeout: 120
+          browser: firefox
+          parallel: true
+          record: true
+          group: "Chrome"
+        env:
+          CYPRESS_PROJECT_ID: ${{ secrets.CYPRESS_PROJECT_ID }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}

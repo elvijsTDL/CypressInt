@@ -1,11 +1,11 @@
 const USERNAME_FIELD = "#username";
 const PASSWORD_FIELD = "#password";
-const SIGN_IN_BUTTON = "[data-test=signin-submit]";
-const SIGN_UP_LINK = "[data-test=signup]";
+const SIGN_IN_BUTTON = "signin-submit";
+const SIGN_UP_LINK = "signup";
 const FIRST_NAME_FIELD = "#firstName";
 const LAST_NAME_FIELD = "#lastName";
 const CONFIRM_PASSWORD_FIELD = "#confirmPassword";
-const SIGN_UP_BUTTON = "[data-test=signup-submit]";
+const SIGN_UP_BUTTON = "signup-submit";
 
 export class SignInPage {
   static visitBasePage() {
@@ -18,7 +18,7 @@ export class SignInPage {
   }
 
   static clickSignIn() {
-    cy.get(SIGN_IN_BUTTON).click();
+    cy.getBySel(SIGN_IN_BUTTON).click();
   }
 
   static verifyHomePageUrl() {
@@ -26,7 +26,7 @@ export class SignInPage {
   }
 
   static clickSignUp() {
-    cy.get(SIGN_UP_LINK).click();
+    cy.getBySel(SIGN_UP_LINK).click();
   }
 
   static inputNewUserDetails() {
@@ -38,13 +38,13 @@ export class SignInPage {
   }
 
   static clickSubmitSignUp() {
-    cy.get(SIGN_UP_BUTTON).click();
+    cy.getBySel(SIGN_UP_BUTTON).click();
   }
 
   static logInWithNewAccount() {
     cy.get(USERNAME_FIELD).type("user123");
     cy.get(PASSWORD_FIELD).type("password123");
-    cy.get(SIGN_IN_BUTTON).click();
+    cy.getBySel(SIGN_IN_BUTTON).click();
   }
 
   static clickOnField(field: string) {
@@ -58,6 +58,6 @@ export class SignInPage {
   }
 
   static clickOnDisabledSignUpButton() {
-    cy.get(SIGN_UP_BUTTON).click({ force: true });
+    cy.getBySel(SIGN_UP_BUTTON).click({ force: true });
   }
 }
