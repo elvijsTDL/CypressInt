@@ -8,7 +8,7 @@ jobs:
   install:
     runs-on: ubuntu-latest
     container:
-      image: node16.16.0-chrome107-ff107
+      image: cypress/browsers:node16.16.0-chrome107-ff107
       options: --user 1001
     steps:
       - name: Checkout
@@ -33,7 +33,7 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     container:
-      image: node16.16.0-chrome107-ff107
+      image: cypress/browsers:node16.16.0-chrome107-ff107
       options: --user 1001
     needs: install
     strategy:
@@ -69,7 +69,7 @@ jobs:
     timeout-minutes: 10
     runs-on: ubuntu-latest
     container:
-      image: node16.16.0-chrome107-ff107
+      image: cypress/browsers:node16.16.0-chrome107-ff107
       options: --user 1001
     needs: install
     strategy:
